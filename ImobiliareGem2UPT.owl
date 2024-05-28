@@ -1,0 +1,968 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/ontology/imobiliar#"
+     xml:base="http://example.org/ontology/imobiliar"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:imob="http://example.org/ontology/imobiliar#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/ontology/imobiliar"/>
+
+    <!-- Annotation properties -->
+    <owl:AnnotationProperty rdf:about="http://example.org/ontology/imobiliar#areAmenajareExterioara"/>
+
+    <!-- Datatypes -->
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areAccesLaTransport">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#StatieTransport"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areCamera">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areDotare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Dotare"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areFacilitate">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Facilitate"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areFinisaj">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Finisaj"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areIstoricProprietari">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#IstoricProprietar"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areServiciiSecuritate">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ServiciuSecuritate"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areStilArhitectural">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#StilArhitectural"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areVecinatate">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areVedereLa">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ZonaVerde"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteConstruitaDe">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#CompanieConstructii"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteDotataCu">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Tehnologie"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteGestionatDe">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteLocalizatIn">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteOfertaDe">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ContractInchiriere"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteSupravegheataDe">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#SistemSupraveghere"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#inVecinatatea">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Facilitate"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#utilizeazaEnergieRegenerabila">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#SursaEnergieRegenerabila"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#permiteAccesDeUrgenta">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ServiciuSecuritate"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#arePoliticaDeIntretinere">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#CompanieConstructii"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areCapacitateDeParcare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Parcare"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteInProximitatea">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#FacilitatePublica"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteConfigurataCu">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzire"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteEchipataCuSistemeSmart">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#TehnologieSmartHome"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areZonareEcologica">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Teren"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ZonaVerde"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#oferaVederePanoramica">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Peisaj"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areAccesRestrictionat">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#CladireDeBirouri"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#SistemDeSecuritate"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areLegaturaCulturala">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#MonumentIstoric"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#beneficiazaDeServiciiComunitare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaRezidentiala"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ServiciuComunitar"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteAsigurataDe">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#CompanieDeAsigurari"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#arePlanDeEvacuare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#PlanDeEvacuare"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areFacilitatiDeReciclare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ComplexRezidential"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#CompanieDeAmenajariPaysagistice"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areConexiuniTransportPublic">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#TransportPublic"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#oferaServiciiMedicale">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaComerciala"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#CentruMedical"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areOptiuniDeRelaxare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ComplexRezidential"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#Parc"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#permiteActivitatiComerciale">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ActivitateComerciala"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areSolutiiDeEconomisireEnergie">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#SursaEnergieRegenerabila"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#esteMonitorizataVideo">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaComerciala"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#SistemSupraveghereVideo"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areFacilitatiEducatie">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#InstitutieEducativa"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areReteaDeApa">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#SistemDeAprovizionareCuApa"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areStrategiiDeDezvoltareUrbana">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Municipalitate"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#PlanDeDezvoltareUrbana"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/imobiliar#areReglementariDeConstruire">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Teren"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/imobiliar#ReglementariLocale"/>
+    </owl:ObjectProperty>
+
+    <!-- Data Properties -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areAnConstructie">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areCapacitateIncalzire">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areDimensiuneGradina">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areEtaj">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areInaltimeTavan">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areLatimeFrontStradal">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areNivelZgomot">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areNumarCamere">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areNumarEtaje">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areNumarLocuriParcare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#arePret">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areRatingEnergetic">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areSuprafata">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areVechime">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areVizibilitateComerciala">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaComerciala"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areSuprafataUtilizabila">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areCosturiIntretinere">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areCuloareExterioara">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areNumarBai">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areSistemAlarma">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areIzolatieTermica">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areVedereLaMare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areAccesInternet">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areFacilitatiPersoaneCuDizabilitati">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#arePerioadaDeGarantie">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areTipClimatizare">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areTipFerestre">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areDensitatePopulatie">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areTipPardoseala">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/imobiliar#areEvaluareRiscSeismic">
+        <rdfs:domain rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#AgentInchirieri">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#AgentVanzari">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#AleaPietonala">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Apartament">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ApartamentDuplex">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Baie">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#BlocLocuinte">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#BrokerImobiliar">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Bucatarie">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Cabana">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Camera"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CameraBirouDeLucru">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CameraPentruCopii">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Cartier">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Casa">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CasaDuplex">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CentruComercial">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Facilitate"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CentruOras">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CentruSportiv">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Facilitate"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Cladire">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CladireComerciala">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Client"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ClientComercial">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Client"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ClientCumparator">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Client"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ClientInchiriator">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Client"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ClientVanzator">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Client"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#CompanieConstructii"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ConsilierImobiliar">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ContractInchiriere"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#DezvoltatorImobiliar">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Client"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Dormitor">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Dotare"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Dressing">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Electrocasnic"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#EvaluatorImobiliar">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Facilitate"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Finisaj"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Garsoniera">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Gradina">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Hol">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#InstitutieEducativa"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#InvestitorImobiliar">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Client"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#IstoricProprietar"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Living">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#LocDeJoacaPentruCopii">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Magazin"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ManagerProprietati">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Mobila"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Parc"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ParcDeDistractii">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Facilitate"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Parcare"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ParcareExterioara">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Pardoseala"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Penthouse">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Piscina">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Proprietar"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ProprietarImobil">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Client"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ProprietateImobiliara"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Restaurant"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ServiciuSecuritate"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#SistemIncalzire"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#SistemSupraveghere"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Skyscraper">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#SpatiuVerde">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#StatieTransport"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#StilArhitectural"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Suburbie">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#SursaEnergieRegenerabila"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Tehnologie"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Terasa">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#TerasaInchisa">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#TransportPublic"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#Vila">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ZonaComerciala"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ZonaDeGratar">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology/imobiliar#AmenajareExterioara"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+    <owl:Class rdf:about="http://example.org/ontology/imobiliar#ZonaVerde"/>
+
+    <!-- Individuals -->
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#AgentImobiliarX">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agent X</imob:areNume>
+    <imob:areExperienta rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</imob:areExperienta>
+    <imob:gestioneazaProprietati rdf:resource="http://example.org/ontology/imobiliar#Apartament1"/>
+    <imob:gestioneazaProprietati rdf:resource="http://example.org/ontology/imobiliar#Apartament3"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#AgentImobiliarY">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agent Y</imob:areNume>
+    <imob:areExperienta rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</imob:areExperienta>
+    <imob:gestioneazaProprietati rdf:resource="http://example.org/ontology/imobiliar#Apartament2"/>
+    <imob:gestioneazaProprietati rdf:resource="http://example.org/ontology/imobiliar#ApartamentLuxe2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#Apartament1">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarX"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:areNumarCamere rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</imob:areNumarCamere>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">70.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</imob:areEtaj>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#Apartament2">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarY"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaSuburbana"/>
+    <imob:areNumarCamere rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</imob:areNumarCamere>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areEtaj>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#Apartament3">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarX"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:areNumarCamere rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarCamere>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</imob:areEtaj>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ApartamentLuxe1">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BaieLuxoasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieModerna"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#CameraDeZiSpatioasa"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#ParcareSubterana"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarX"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</imob:areEtaj>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ApartamentLuxe2">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BaieLuxoasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieModerna"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#CameraDeZiSpatioasa"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#ParcareSubterana"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarY"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaSuburbana"/>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">550000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">130.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</imob:areEtaj>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#BaieLuxoasa">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Baie"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</imob:areSuprafata>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#CadaDeHidromasaj"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#BucatarieModerna">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Bucatarie"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</imob:areSuprafata>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#PlitaElectrica"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#FrigiderIncorporat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#BucatarieOpenSpace">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Bucatarie"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</imob:areSuprafata>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#PlitaElectrica"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#FrigiderIncorporat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CameraDeZiSpatioasa">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Camera"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.0</imob:areSuprafata>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CladireBirouri1">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:areAnConstructie rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-01-01</imob:areAnConstructie>
+    <imob:areNumarEtaje rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</imob:areNumarEtaje>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</imob:areSuprafata>
+    <imob:areNumarBirouri rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</imob:areNumarBirouri>
+    <imob:areParcareSubterana rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areParcareSubterana>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CompanieDePaza">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#CompanieConstructii"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Companie Paza</imob:areNume>
+    <imob:areNumarAngajati rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</imob:areNumarAngajati>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Dormitor"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</imob:areSuprafata>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetExotic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#GarajAutomatizat">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Dotare"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</imob:areSuprafata>
+    <imob:areNumarLocuri rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarLocuri>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#GresieImportata">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Finisaj"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#LivingSpatial">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Living"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.0</imob:areSuprafata>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#MagazinCentral">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Magazin"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaComerciala"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</imob:areSuprafata>
+    <imob:areNumarAngajati rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</imob:areNumarAngajati>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#PanouriSolare">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#SursaEnergieRegenerabila"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ParcOrasenesc">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Parc"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaVerde"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10000.0</imob:areSuprafata>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ParcareSubterana">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Parcare"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</imob:areSuprafata>
+    <imob:areNumarLocuri rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</imob:areNumarLocuri>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ParchetDeCalitate">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Finisaj"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ParchetExotic">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Finisaj"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ProprietateComplexa1">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieOpenSpace"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#LivingSpatial"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#GarajAutomatizat"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemDeSecuritateAvansat"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#GresieImportata"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetExotic"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaSuburbana"/>
+    <imob:esteSupravegheataDe rdf:resource="http://example.org/ontology/imobiliar#CompanieDePaza"/>
+    <imob:utilizeazaEnergieRegenerabila rdf:resource="http://example.org/ontology/imobiliar#PanouriSolare"/>
+    <imob:areDimensiuneGradina rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</imob:areDimensiuneGradina>
+    <imob:areNumarEtaje rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarEtaje>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">750000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">350.0</imob:areSuprafata>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#PiscinaIncalzita"/>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#TerasaCuVedereLaMunte"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#RestaurantNapoli">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Restaurant"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#BucatarieModerna"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#Wi-Fi"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:inVecinatatea rdf:resource="http://example.org/ontology/imobiliar#Apartament1"/>
+    <imob:areNumarLocuri rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</imob:areNumarLocuri>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#SistemDeSecuritateAvansat">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#SistemDeSecuritate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzire"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#Wi-Fi">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Facilitate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ZonaCentrala">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ZonaComerciala">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ZonaSuburbana">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ZonaVerde">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#ZonaUrbana"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#AgentImobiliarIonPopescu">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ion Popescu</imob:areNume>
+    <imob:areExperienta rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</imob:areExperienta>
+    <imob:areNumarProprietatiGestionate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</imob:areNumarProprietatiGestionate>
+    <imob:lucreazaPentru rdf:resource="http://example.org/ontology/imobiliar#CompanieImobiliaraExpert"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#AgentImobiliarAnaIonescu">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliar"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ana Ionescu</imob:areNume>
+    <imob:areExperienta rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</imob:areExperienta>
+    <imob:areNumarProprietatiGestionate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</imob:areNumarProprietatiGestionate>
+    <imob:lucreazaPentru rdf:resource="http://example.org/ontology/imobiliar#CompanieImobiliaraPremium"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ApartamentLuxPenthouse">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BaieLuxoasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieModerna"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#CameraDeZiSpatioasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#ParcareSubterana"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarIonPopescu"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</imob:areEtaj>
+    <imob:areVederePanoramica rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areVederePanoramica>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ApartamentFamilie">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BaieLuxoasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieOpenSpace"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#CameraDeZiSpatioasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorCopii"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#ParcareExterioara"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarAnaIonescu"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaRezidentiala"/>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areEtaj>
+    <imob:areParcareExterioara rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areParcareExterioara>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CasaVila">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieModerna"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#LivingSpatial"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#GarajAutomatizat"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemDeSecuritateAvansat"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#GresieImportata"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetExotic"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaRezidentiala"/>
+    <imob:utilizeazaEnergieRegenerabila rdf:resource="http://example.org/ontology/imobiliar#PanouriSolare"/>
+    <imob:areDimensiuneGradina rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</imob:areDimensiuneGradina>
+    <imob:areNumarEtaje rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</imob:areNumarEtaje>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</imob:areSuprafata>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#PiscinaIncalzita"/>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#TerasaCuVedereLaMunte"/>
+    <imob:esteSupravegheataDe rdf:resource="http://example.org/ontology/imobiliar#CompanieDePaza"/>
+    <imob:areVedereLaMare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areVedereLaMare>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ComplexRezidentialModern">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#ComplexRezidential"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#ParcPrivat"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#LocDeJoacaPentruCopii"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#SalaFitness"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#PiscinaIncalzita"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#ParcareSubterana"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaRezidentiala"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2000.0</imob:areSuprafata>
+    <imob:areNumarApartamente rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</imob:areNumarApartamente>
+    <imob:arePretMediu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250000.00</imob:arePretMediu>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ParcPrivat">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Parc"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ComplexRezidentialModern"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</imob:areSuprafata>
+    <imob:areNumarCopaci rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</imob:areNumarCopaci>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#SalaFitness">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Facilitate"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ComplexRezidentialModern"/>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</imob:areSuprafata>
+    <imob:areNumarEchipamente rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</imob:areNumarEchipamente>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CladireBirouriCentralPlaza">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Cladire"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:areAnConstructie rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-01</imob:areAnConstructie>
+    <imob:areNumarEtaje rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</imob:areNumarEtaje>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">750.0</imob:areSuprafata>
+    <imob:esteSupravegheataDe rdf:resource="http://example.org/ontology/imobiliar#CompanieDePaza"/>
+    <imob:areParcareSubterana rdf:resource="http://example.org/ontology/imobiliar#ParcareSubterana"/>
+    <imob:areSistemIncalzire rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ProprietarCompanie">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Proprietar"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compania Imobiliară MegaConstruct</imob:areNume>
+    <imob:detine rdf:resource="http://example.org/ontology/imobiliar#ComplexRezidentialModern"/>
+    <imob:detine rdf:resource="http://example.org/ontology/imobiliar#CladireBirouriCentralPlaza"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CompanieImobiliaraExpert">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#CompanieImobiliara"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expert Imobiliar SRL</imob:areNume>
+    <imob:areAdresa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strada Principala 1, Bucuresti</imob:areAdresa>
+    <imob:areNumarAngajati rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</imob:areNumarAngajati>
+    <imob:areExperienta rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</imob:areExperienta>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CompanieImobiliaraPremium">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#CompanieImobiliara"/>
+    <imob:areNume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Premium Imobiliare SA</imob:areNume>
+    <imob:areAdresa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulevardul Unirii 10, Cluj-Napoca</imob:areAdresa>
+    <imob:areNumarAngajati rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</imob:areNumarAngajati>
+    <imob:areExperienta rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</imob:areExperienta>
+</owl:NamedIndividual>
+
+<!-- Apartamente -->
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ApartamentDeLux1">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BaieLuxoasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieModerna"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#CameraDeZiSpatioasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemClimatizare"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#ParcareSubterana"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#PiscinaComuna"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarIonPopescu"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaCentrala"/>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">700000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</imob:areEtaj>
+    <imob:areVederePanoramica rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areVederePanoramica>
+    <imob:areGarantie rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areGarantie>
+    <imob:areCosturiIntretinere rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.00</imob:areCosturiIntretinere>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#ApartamentFamilial">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Apartament"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BaieLuxoasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieOpenSpace"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#CameraDeZiSpatioasa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorCopii"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzireCentralizat"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemAlarma"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#ParcareExterioara"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetDeCalitate"/>
+    <imob:esteGestionatDe rdf:resource="http://example.org/ontology/imobiliar#AgentImobiliarAnaIonescu"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaRezidentiala"/>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">350000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</imob:areSuprafata>
+    <imob:areBalcon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areBalcon>
+    <imob:areNumarBai rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarBai>
+    <imob:areEtaj rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areEtaj>
+    <imob:areCosturiIntretinere rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150.00</imob:areCosturiIntretinere>
+</owl:NamedIndividual>
+
+<!-- Case -->
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CasaVilaEleganta">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieModerna"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipalCuBaieEnsuite"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#LivingSpatial"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#Birou"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#GarajAutomatizat"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemDeSecuritateAvansat"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemClimatizare"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#PiscinaIncalzita"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#GradinaAmenajata"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#GresieImportata"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#ParchetExotic"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaRezidentiala"/>
+    <imob:utilizeazaEnergieRegenerabila rdf:resource="http://example.org/ontology/imobiliar#PanouriSolare"/>
+    <imob:areDimensiuneGradina rdf:datatype="http://www.w3.org/2001/XMLSchema#float">400.0</imob:areDimensiuneGradina>
+    <imob:areNumarEtaje rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</imob:areNumarEtaje>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">600.0</imob:areSuprafata>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#TerasaCuVedereLaMunte"/>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#ZonaDeGratar"/>
+    <imob:esteSupravegheataDe rdf:resource="http://example.org/ontology/imobiliar#CompanieDePaza"/>
+    <imob:areVedereLaMare rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</imob:areVedereLaMare>
+    <imob:areCosturiIntretinere rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.00</imob:areCosturiIntretinere>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://example.org/ontology/imobiliar#CasaTraditionalaRomaneasca">
+    <rdf:type rdf:resource="http://example.org/ontology/imobiliar#Casa"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#BucatarieRustica"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#DormitorPrincipal"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#Living"/>
+    <imob:areCamera rdf:resource="http://example.org/ontology/imobiliar#Biblioteca"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#Garaj"/>
+    <imob:areDotare rdf:resource="http://example.org/ontology/imobiliar#SistemIncalzirePardoseala"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#GradinaSpatioasa"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#Pivnita"/>
+    <imob:areFacilitate rdf:resource="http://example.org/ontology/imobiliar#TerasaAcoperita"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#PodeaDinLemnMassiv"/>
+    <imob:areFinisaj rdf:resource="http://example.org/ontology/imobiliar#TavanCuGrinziDeLemn"/>
+    <imob:esteLocalizatIn rdf:resource="http://example.org/ontology/imobiliar#ZonaRurala"/>
+    <imob:utilizeazaEnergieRegenerabila rdf:resource="http://example.org/ontology/imobiliar#SistemGeotermal"/>
+    <imob:areDimensiuneGradina rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</imob:areDimensiuneGradina>
+    <imob:areNumarEtaje rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</imob:areNumarEtaje>
+    <imob:arePret rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">850000.00</imob:arePret>
+    <imob:areSuprafata rdf:datatype="http://www.w3.org/2001/XMLSchema#float">350.0</imob:areSuprafata>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#GradinaCuFlori"/>
+    <imob:areAmenajareExterioara rdf:resource="http://example.org/ontology/imobiliar#FantanaDecorativa"/>
+    <imob:esteSupravegheataDe rdf:resource="http://example.org/ontology/imobiliar#CompanieDePaza"/>
+    <imob:areCosturiIntretinere rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200.00</imob:areCosturiIntretinere>
+</owl:NamedIndividual>
+
+
+
+</rdf:RDF>
